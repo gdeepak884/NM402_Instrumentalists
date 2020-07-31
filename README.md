@@ -1,1 +1,1 @@
-# `NM402_Instrumentalists`: Submission for SIH2020.
+# `NM402_Instrumentalists`
