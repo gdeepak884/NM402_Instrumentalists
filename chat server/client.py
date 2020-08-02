@@ -1,4 +1,4 @@
-import socket, zlib, select, string, sys, binascii
+import socket, zlib, select, string, sys, binascii, zstandard
 
 def display() :
 	you="\33[33m\33[1m"+" You:"+"\33[0m"
@@ -27,13 +27,14 @@ def main():
         rList, wList, error_list = select.select(socket_list , [], [])
         for sock in rList:
             if sock == s:
-                data = sock.recv(4096)
+                data = sock.recv(4096) 
+                cdata = zlib.compress(data, 2)
                 if not data :
                     print '\33[31m\33[1m \rDisconnected\n \33[0m'
                     sys.exit()
                 else :
-                    
-                    sys.stdout.write(data)
+                    ddata = zlib.decompress(cdata)
+                    sys.stdout.write(ddata)
                     display()
             else :
                 msg=sys.stdin.readline()
@@ -42,3 +43,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

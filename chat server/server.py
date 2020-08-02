@@ -1,4 +1,4 @@
-import socket, select
+import socket, select,zlib
 def send_to_all (sock, message):
 	for socket in connected_list:
 		if socket != server_socket and socket != sock :
@@ -73,4 +73,5 @@ if __name__ == "__main__":
 					continue
 
 	server_socket.close()
+
 
