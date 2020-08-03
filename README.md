@@ -43,7 +43,7 @@
 ![Approach](./approach.docx)
 
 
-## Tesing 
+## Testing 
 
 **Testing on localserver:**
 The `chat server/` subdirectory contains test applications.
