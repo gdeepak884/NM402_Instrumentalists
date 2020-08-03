@@ -18,6 +18,9 @@
  ### CHANGING
       These fields are expected to vary randomly within a limited
       value set or range or in some other manner.
+      
+![Approach](./approach.doc)
+
 
 ## Tesing 
 
@@ -27,3 +30,10 @@ The `chat server/` subdirectory contains test applications.
        1. python server.py
        2. python client.py 127.0.0.1 1234 with username{ex. deepak}
        3. python client.py 127.0.0.1 1234 with another username{ex. gdeepak}
+
+### References:
+   
+   ROHC paper RFC 3095,
+   White Paper Header Compression The portion are partially or completely taken from different resources
+   Zlib Python Library
+   Socket Programming
