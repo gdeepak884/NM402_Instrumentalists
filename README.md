@@ -42,6 +42,10 @@
       
 ![Approach](./approach.docx)
 
+## What's next
+   
+   Implementation of ROHC header compression for better compression ratio, build a leveling up system or dashboard like filezill to 
+     reward productive users. Challenege other users to see determine who is more productive.
 
 ## Tesing 
 
@@ -55,6 +59,6 @@ The `chat server/` subdirectory contains test applications.
 ### References:
    
    ROHC paper RFC 3095,
-   White Paper Header Compression The portion are partially or completely taken from different resources
-   Zlib Python Library
+   White Paper Header Compression The portion are partially or completely taken from different resources,
+   Zlib Python Library and 
    Socket Programming
