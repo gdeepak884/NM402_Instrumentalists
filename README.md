@@ -47,7 +47,7 @@
 
 **Testing on localserver:**
 The `chat server/` subdirectory contains test applications.
-The `main.py` file can be used to track header fields.
+The `main.py` file can be used to track header fields, send packets and can also used to find open ports.
 
        >> python server.py
        >> python client.py 127.0.0.1 1234 with username{ex. deepak}
