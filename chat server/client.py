@@ -29,23 +29,12 @@ def main():
             if sock == s:
                 data = sock.recv(4096) 
                 compress = zlib.compressobj(zlib.Z_DEFAULT_COMPRESSION, zlib.DEFLATED, +15)
-<<<<<<< HEAD
                 cdata = compress.compress(data)
                 cdata += compress.flush()
                 compress_ratio = (float(len(cdata)) - float(len(data))) / float(len(cdata))
                 f = open('compressed.dat', 'w')
                 f.write(cdata)
                 print('Compressed: %d%%' % (100.0 * compress_ratio))
-=======
-                compressed_data = compress.compress(data)
-                cdata += compress.flush()
-                compress_ratio = (float(len(data)) - float(len(cdata))) / float(len(cdata))
-
-                print('Compressed: %d%%' % (100.0 * compress_ratio))
-                f = open('compressed.dat', 'w')
-                f.write(cdata)
->>>>>>> 8f42c7d75df2e43e910b66894672615e0e3d761c
-                f.close()
                 CHUNKSIZE = 1024
                 if not data :
                     print '\33[31m\33[1m \rDisconnected\n \33[0m'
@@ -54,7 +43,6 @@ def main():
                     data2 = zlib.decompressobj()
                     my_file = open('compressed.dat', 'rb')            
                     buf = my_file.read(CHUNKSIZE)
-<<<<<<< HEAD
                     while buf:
                             ddata = data2.decompress(buf)
                             buf = my_file.read(CHUNKSIZE)
@@ -62,15 +50,6 @@ def main():
                             #ddata = zlib.decompress(ddata)
                             sys.stdout.write(ddata)
                             display()
-=======
-                         while buf:
-                           decompressed_data = data2.decompress(buf)
-                           buf = my_file.read(CHUNKSIZE)
-                           ddata += data2.flush()
-                           #ddata = zlib.decompress(ddata)
-                           sys.stdout.write(ddata)
-                           display()
->>>>>>> 8f42c7d75df2e43e910b66894672615e0e3d761c
             else :
                 msg=sys.stdin.readline()
                 s.send(msg)
@@ -78,5 +57,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
