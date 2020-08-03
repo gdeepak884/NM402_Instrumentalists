@@ -30,7 +30,7 @@
   
   These fields are expected to be constant throughout the
     lifetime of the packet stream. Static information must in some
-    way be communicated once. STATIC fields whose values define a
+    way be communicated only once. STATIC fields whose values define a
     packet stream. They are in general handled as STATIC.
     These STATIC fields are expected to have well-known values and
     therefore do not need to be communicated at all.
