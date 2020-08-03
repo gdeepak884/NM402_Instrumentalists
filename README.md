@@ -19,7 +19,7 @@
       These fields are expected to vary randomly within a limited
       value set or range or in some other manner.
       
-![Approach](./approach.doc)
+![Approach](./approach.docx)
 
 
 ## Tesing 
