@@ -54,7 +54,10 @@ The `main.py` file can be used to track header fields, send packets and can also
        >> python client.py 127.0.0.1 1234 with username{ex. deepak}
        >> python client.py 127.0.0.1 1234 with another username{ex. gdeepak}
 
-### References:
+## Result
+   Acheived compression ratio of approx. 25% per TCP/IP Packet
+   
+## References:
    
    ROHC paper RFC 3095,
    White Paper Header Compression The portion are partially or completely taken from different resources
