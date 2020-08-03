@@ -31,6 +31,9 @@ def main():
                 compress = zlib.compressobj(zlib.Z_DEFAULT_COMPRESSION, zlib.DEFLATED, +15)
                 compressed_data = compress.compress(data)
                 cdata += compress.flush()
+                compress_ratio = (float(len(data)) - float(len(cdata))) / float(len(cdata))
+
+                print('Compressed: %d%%' % (100.0 * compress_ratio))
                 f = open('compressed.dat', 'w')
                 f.write(cdata)
                 f.close()
