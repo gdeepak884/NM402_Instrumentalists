@@ -46,8 +46,8 @@
 ## Testing 
 
 **Testing on localserver:**
-The `chat server/` subdirectory contains test applications.
 
+The `chat server/` subdirectory contains test applications.
 The `main.py` file can be used to track header fields, send packets and can also used to find open ports.
 
        >> python server.py
