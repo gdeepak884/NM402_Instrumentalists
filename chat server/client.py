@@ -28,14 +28,27 @@ def main():
         for sock in rList:
             if sock == s:
                 data = sock.recv(4096) 
-                cdata = zlib.compress(data, 2)
+                compress = zlib.compressobj(zlib.Z_DEFAULT_COMPRESSION, zlib.DEFLATED, +15)
+                compressed_data = compress.compress(data)
+                cdata += compress.flush()
+                f = open('compressed.dat', 'w')
+                f.write(cdata)
+                f.close()
+                CHUNKSIZE = 1024
                 if not data :
                     print '\33[31m\33[1m \rDisconnected\n \33[0m'
                     sys.exit()
                 else :
-                    ddata = zlib.decompress(cdata)
-                    sys.stdout.write(ddata)
-                    display()
+                    data2 = zlib.decompressobj()
+                    my_file = open('compressed.dat', 'rb')            
+                    buf = my_file.read(CHUNKSIZE)
+                         while buf:
+                           decompressed_data = data2.decompress(buf)
+                           buf = my_file.read(CHUNKSIZE)
+                           ddata += data2.flush()
+                           #ddata = zlib.decompress(ddata)
+                           sys.stdout.write(ddata)
+                           display()
             else :
                 msg=sys.stdin.readline()
                 s.send(msg)
