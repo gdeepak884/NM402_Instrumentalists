@@ -1,6 +1,25 @@
 # NM402_Instrumentalists
+## Approach 
+ 
+ ### INFERRED
+      These fields contain values that can be inferred from other
+      values (for example, the size of the frame carrying the packet)
+      and thus do not have to be handled at all by the compression
+      scheme.
+   
+ ### STATIC
+      These fields are expected to be constant throughout the
+      lifetime of the packet stream. Static information must in some
+      way be communicated once. STATIC fields whose values define a
+      packet stream. They are in general handled as STATIC.
+      These STATIC fields are expected to have well-known values and
+      therefore do not need to be communicated at all.
+ 
+ ### CHANGING
+      These fields are expected to vary randomly within a limited
+      value set or range or in some other manner.
 
-# Tesing 
+## Tesing 
 
 **Testing on localserver:**
 The `chat server/` subdirectory contains test applications.
