@@ -3,7 +3,7 @@
 ## Abstract:
   Due to the rapid evolution of internet and wireless networks a need of the efficient 
     transmission over the channels for QOS. Efficiency is extremely vital once the value
-    of transmission is extremely high. Example, in SATCOM networks operate under bandwidth 
+    of transmission is extremely high. Example, in SATCOM networks operate under low bandwidth 
     & power limited scenarios. In order to effectively utilize the network resources,
     the overheads are required to be reduced in the user traffic. Header compression will 
     play a vital role in payload transmission. The result of compression is that there's 
@@ -42,10 +42,6 @@
       
 ![Approach](./approach.docx)
 
-## What's next
-   
-   Implementation of ROHC header compression for better compression ratio, build a leveling up system or dashboard like filezill to 
-     reward productive users. Challenege other users to see determine who is more productive.
 
 ## Tesing 
 
@@ -59,6 +55,6 @@ The `chat server/` subdirectory contains test applications.
 ### References:
    
    ROHC paper RFC 3095,
-   White Paper Header Compression The portion are partially or completely taken from different resources,
-   Zlib Python Library and 
+   White Paper Header Compression The portion are partially or completely taken from different resources
+   Zlib Python Library
    Socket Programming
